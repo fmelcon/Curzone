@@ -335,6 +335,15 @@ footer {
   text-align: center;
   color: #fff;
 }
+
+.bxl-facebook{
+  color:white;
+}
+
+.bxl-facebook:hover{
+  color:#3f3d56;
+}
+
 .social-media-icon:hover {
   background: #fff;
   color: rgb(63, 61, 86);

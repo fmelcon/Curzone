@@ -42,21 +42,6 @@ function cargarEventListeners() {
 // Funciones
 // =============================================================================
 
-// function stickyElement(e) {
-//   var header = document.querySelector(".container");
-//   var headerHeight = getComputedStyle(header).height.split("px")[0];
-//   var navbar = document.querySelector(".navigation");
-//   var scrollValue = window.scrollY;
-
-//   console.log("headerHeight", headerHeight);
-
-//   if (scrollValue > headerHeight) {
-//     navbar.classList.add("is-fixed");
-//   } else if (scrollValue < headerHeight) {
-//     navbar.classList.remove("is-fixed");
-//   }
-// }
-
 function stickyElement(e) {
   const navbar = $("#headfix");
   const navbarHeight = getComputedStyle(navbar).height.split("px")[0];
