@@ -42,7 +42,7 @@ function cargarEventListeners() {
 // Funciones
 // =============================================================================
 
-function stickyElement(e) {
+function stickyElement() {
   const navbar = $("#headfix");
   const navbarHeight = getComputedStyle(navbar).height.split("px")[0];
   const scrollValue = window.scrollY;
