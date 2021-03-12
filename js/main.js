@@ -19,6 +19,10 @@ const $ = document.querySelector.bind(document);
 const carrito = $("#carrito");
 const contenedorCarrito = $("#lista-carrito tbody");
 const listaCursos = $("#lista-cursos");
+const lista = $(".lista");
+const form = $(".form");
+const input = $("#name");
+const ultimo = $(".name");
 let articulosCarrito = [];
 
 cargarEventListeners();
@@ -28,8 +32,10 @@ function cargarEventListeners() {
   listaCursos.addEventListener("click", agregarCurso);
   //Elimina un curso no deseado
   carrito.addEventListener("click", eliminarCurso);
-
+  //pega la navigation bar
   window.addEventListener("scroll", stickyElement);
+  //saluda si pones nombre
+  form.addEventListener("submit", addName);
 
   document.addEventListener("DOMContentLoaded", () => {
     articulosCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -41,6 +47,11 @@ function cargarEventListeners() {
 // =============================================================================
 // Funciones
 // =============================================================================
+function addName(e) {
+  e.preventDefault();
+  ultimo.innerText = input.value;
+  input.value = "";
+}
 
 function stickyElement() {
   const navbar = $("#headfix");
