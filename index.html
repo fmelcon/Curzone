@@ -17,6 +17,18 @@
         <div class="logo">
           <img class="logo" src="./assets/logonew.png">
         </div>
+        <div>
+          <form class="form">
+            <input
+              required
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Dinos tu Nombre!"
+            />
+            <input type="submit" name="enviar" value="Enviar datos" />
+          </form>
+        </div>
         <nav id="navegacion">
           <a href="#home" class="nav-link">Inicio</a>
           <a href="#cursos" class="nav-link">Cursos</a>
@@ -50,7 +62,7 @@
   <main>
     <section class="hero">
       <div class="herotext">
-        <h1>Welcome aboard!</h1>
+        <h1>Welcome aboard! <span class="name"></span></h1>
         <p>Queremos invitarte a que formes parte de nuestra red de aprendizaje</p>
         <p>En <strong>Curzone</strong> somos el lugar de el aqui y el ahora de tus metas hechas realidad</p>
       </div>
