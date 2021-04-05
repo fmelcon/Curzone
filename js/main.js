@@ -22,7 +22,8 @@ const listaCursos = $("#lista-cursos");
 const lista = $(".lista");
 const form = $(".form");
 const input = $("#name");
-const ultimo = $(".name");
+const heroTextName = $(".name");
+const herotext = $("herotext");
 let articulosCarrito = [];
 
 cargarEventListeners();
@@ -44,12 +45,19 @@ function cargarEventListeners() {
   });
 }
 
+jQuery(".herotext").hide(() => {
+  jQuery(".herotext").fadeIn(8000, () => {
+    jQuery(".herotext").fadeOut(10000);
+  });
+});
+
 // =============================================================================
 // Funciones
 // =============================================================================
+
 function addName(e) {
   e.preventDefault();
-  ultimo.innerText = input.value;
+  heroTextName.innerText = input.value;
   input.value = "";
 }
 
@@ -144,6 +152,7 @@ function carritoHTML() {
   $("#totalCarrito").textContent = `$ ${totalCarrito.toFixed(2)}`;
   //agregar local storage
   sincronizarStorage();
+  console.log(articulosCarrito);
 }
 
 function sincronizarStorage() {
