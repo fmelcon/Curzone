@@ -23,7 +23,6 @@ const lista = $(".lista");
 const form = $(".form");
 const input = $("#name");
 const heroTextName = $(".name");
-const herotext = $("herotext");
 let articulosCarrito = [];
 
 cargarEventListeners();
@@ -152,7 +151,6 @@ function carritoHTML() {
   $("#totalCarrito").textContent = `$ ${totalCarrito.toFixed(2)}`;
   //agregar local storage
   sincronizarStorage();
-  console.log(articulosCarrito);
 }
 
 function sincronizarStorage() {
