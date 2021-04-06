@@ -341,6 +341,10 @@ form input[type="submit"]:hover {
   flex-wrap: wrap;
 }
 
+.caja-referencias {
+  text-align: center;
+}
+
 footer {
   background-color: rgb(0, 0, 0);
   padding-bottom: 0.1px;
@@ -410,6 +414,9 @@ footer {
   text-align: center;
   color: #fff;
 }
+#comentarios {
+  font-size: 2rem;
+}
 
 .console-container {
   font-family: monospace;
@@ -453,6 +460,9 @@ footer {
   }
 }
 @media (max-width: 570px) {
+  #comentarios {
+    font-size: 12px;
+  }
   .console-container {
     font-size: 3.5rem;
     width: 300px;

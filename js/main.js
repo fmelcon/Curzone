@@ -15,14 +15,13 @@
 // Variables globales
 // =============================================================================
 
-const $ = document.querySelector.bind(document);
-const carrito = $("#carrito");
-const contenedorCarrito = $("#lista-carrito tbody");
-const listaCursos = $("#lista-cursos");
-const lista = $(".lista");
-const form = $(".form");
-const input = $("#name");
-const heroTextName = $(".name");
+const carrito = document.querySelector("#carrito");
+const contenedorCarrito = document.querySelector("#lista-carrito tbody");
+const listaCursos = document.querySelector("#lista-cursos");
+const lista = document.querySelector(".lista");
+const form = document.querySelector(".form");
+const input = document.querySelector("#name");
+const heroTextName = document.querySelector(".name");
 let articulosCarrito = [];
 
 cargarEventListeners();
@@ -121,7 +120,7 @@ function addName(e) {
 }
 
 function stickyElement() {
-  const navbar = $("#headfix");
+  const navbar = document.querySelector("#headfix");
   const navbarHeight = getComputedStyle(navbar).height.split("px")[0];
   const scrollValue = window.scrollY;
 
@@ -208,7 +207,9 @@ function carritoHTML() {
     totalCarrito += total;
     contenedorCarrito.appendChild(row);
   });
-  $("#totalCarrito").textContent = `$ ${totalCarrito.toFixed(2)}`;
+  document.querySelector(
+    "#totalCarrito"
+  ).textContent = `$ ${totalCarrito.toFixed(2)}`;
   //agregar local storage
   sincronizarStorage();
 }
@@ -223,3 +224,21 @@ function limpiarHTML() {
     contenedorCarrito.removeChild(contenedorCarrito.firstChild);
   }
 }
+
+//Llamar a la APi
+
+$.get("https://jsonplaceholder.typicode.com/posts/1/comments", (datos) => {
+  console.log(datos);
+  for (let post of datos) {
+    $("#comentarios").append(`<h2>${post.email}</h2>`);
+  }
+});
+
+$(document).ready(function () {
+  $("#ocultarmails").click(function () {
+    $("#comentarios").hide();
+  });
+  $("#vermails").click(function () {
+    $("#comentarios").show();
+  });
+});
