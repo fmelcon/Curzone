@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
 
 * {
   margin: 0;
@@ -169,14 +170,17 @@ form input[type="submit"]:hover {
 
 .hero {
   position: relative;
-  background: rgb(255, 255, 255);
+  background: #000428; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #004e92,
+    #000428
+  ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    61deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(167, 239, 242, 1) 37%,
-    rgba(105, 204, 227, 1) 62%,
-    rgba(191, 230, 238, 1) 100%
-  );
+    to right,
+    #004e92,
+    #000428
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .herotext {
@@ -271,8 +275,8 @@ form input[type="submit"]:hover {
 .subtitulo {
   padding: 2rem;
   text-align: center;
-  font-weight: 300;
-  color: #58a2ea;
+  font-weight: 500;
+  color: #ffc927;
   margin-bottom: 40px;
   font-size: 2.5rem;
 }
@@ -290,13 +294,15 @@ form input[type="submit"]:hover {
 
 .agregar-carrito {
   text-decoration: none;
-  background: rgb(93, 134, 172);
+  background: rgb(255 201 39);
   color: #fff;
   border: none;
+  text-transform: uppercase;
   text-align: center;
   border-radius: 0.2em;
   padding: 0.2em 2.2em;
   cursor: pointer;
+  box-shadow: 3px 3px 5px;
 }
 
 .card {
@@ -306,9 +312,10 @@ form input[type="submit"]:hover {
   text-align: center;
   border-radius: 5%;
   border: 1px solid #121313;
-  background: rgb(25%, 24%, 34%);
+  background: rgb(0 0 0 / 87%);
   margin-bottom: 4.4rem;
-  box-shadow: 5px 2px 5px rgb(63, 61, 86);
+  box-shadow: 5px 2px 5px rgb(63 61 86);
+  padding: 1rem;
 }
 .info-card {
   padding: 1rem 1rem;
@@ -334,7 +341,7 @@ form input[type="submit"]:hover {
 }
 
 footer {
-  background-color: rgb(63, 61, 86);
+  background-color: rgb(0, 0, 0);
   padding-bottom: 0.1px;
 }
 
@@ -403,6 +410,30 @@ footer {
   color: #fff;
 }
 
+.console-container {
+  font-family: monospace;
+  background-color: rgba(0, 0, 0, 0.603);
+  font-size: 4rem;
+  width: 50%;
+  text-align: center;
+  height: 250px;
+  display: block;
+  position: absolute;
+  align-self: center;
+  color: #ffc927;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.console-underscore {
+  display: inline-block;
+  position: relative;
+  top: -0.14em;
+  left: 10px;
+}
+
 @media (max-width: 1368px) {
   #headfix.is-fixed {
     padding: 0 3%;
@@ -410,6 +441,9 @@ footer {
 }
 
 @media (max-width: 1024px) {
+  .console-container {
+    font-size: 4rem;
+  }
   .slider {
     height: auto;
   }
@@ -418,6 +452,11 @@ footer {
   }
 }
 @media (max-width: 570px) {
+  .console-container {
+    font-size: 3.5rem;
+    width: 300px;
+    height: 300px;
+  }
   .social-media {
     margin: 0;
   }
@@ -490,6 +529,14 @@ footer {
 }
 
 @media (max-width: 400px) {
+  .card {
+    padding: 0;
+  }
+  .console-container {
+    font-size: 4rem;
+    height: 300px;
+    width: 300px;
+  }
   #navegacion a {
     font-size: 7px;
     padding: 5px;
@@ -510,4 +557,8 @@ footer {
   td {
     padding: 0.3rem;
   }
+}
+
+.hidden {
+  opacity: 0;
 }
