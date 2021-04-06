@@ -171,17 +171,9 @@ form input[type="submit"]:hover {
 
 .hero {
   position: relative;
-  background: #000428; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #004e92,
-    #000428
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #004e92,
-    #000428
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000428;
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #004e92, #000428);
 }
 
 .herotext {
@@ -215,7 +207,7 @@ form input[type="submit"]:hover {
   padding: 0;
   display: flex;
   width: 400%;
-  animation: cambio 40s infinite;
+  animation: cambio 20s ease cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 .slider li {
   width: 100%;
