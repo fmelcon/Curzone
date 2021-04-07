@@ -216,7 +216,6 @@ function limpiarHTML() {
 //Llamar a la API
 
 $.get("https://jsonplaceholder.typicode.com/posts/1/comments", (datos) => {
-  console.log(datos);
   for (let post of datos) {
     $("#comentarios").append(`<h2>${post.email}</h2>`);
   }
