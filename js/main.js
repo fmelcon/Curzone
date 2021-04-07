@@ -23,20 +23,13 @@ function cargarEventListeners() {
   //saluda si pones nombre
   form.addEventListener("submit", addName);
 
-  //recupera datos del carrito 
+  //recupera datos del carrito
   document.addEventListener("DOMContentLoaded", () => {
     articulosCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
     carritoHTML();
   });
 }
-
-$(".herotext").hide();
-// jQuery(".herotext").hide(() => {
-//   jQuery(".herotext").fadeIn(8000, () => {
-//     jQuery(".herotext").fadeOut(10000);
-//   });
-// });
 
 // =============================================================================
 // Funciones
@@ -53,6 +46,8 @@ consoleText(
   "text", // ID
   ["#ffc927"] //color
 );
+
+$(".herotext").hide();
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ["#fff"];
@@ -76,19 +71,19 @@ function consoleText(words, id, colors) {
         target.setAttribute("style", "color:" + colors[0]);
         letterCount += x;
         waiting = false;
-      }, 600);//velocidad de espera luego de borrar y tipear denuevo
+      }, 600); //velocidad de espera luego de borrar y tipear denuevo
     } else if (letterCount === words[0].length + 1 && waiting === false) {
       waiting = true;
       window.setTimeout(function () {
         x = -1;
         letterCount += x;
         waiting = false;
-      }, 2000);//tiempo de espera luego de tipear
+      }, 2000); //tiempo de espera luego de tipear
     } else if (waiting === false) {
       target.innerHTML = words[0].substring(0, letterCount);
       letterCount += x;
     }
-  }, 80);//velocidad de tipado
+  }, 80); //velocidad de tipado
   window.setInterval(function () {
     if (visible === true) {
       con.className = "console-underscore hidden";
