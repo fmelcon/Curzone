@@ -189,7 +189,10 @@ form input[type="submit"]:hover {
   text-shadow: 3px 3px 4px rgb(0 0 0 / 50%);
 }
 .hero h1 {
-  font-size: 4rem;
+  padding-top: 25px;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
 }
 
 .herotext p {
@@ -443,6 +446,7 @@ footer {
   right: 0;
   margin: auto;
 }
+
 .console-underscore {
   display: inline-block;
   position: relative;

@@ -1,16 +1,3 @@
-//Primera parte del proyecto preguntar nombre y mostrarlo en un Alert
-// function askName() {
-//     let nombre = prompt("¿Cual es tu nombre?");
-//     return nombre
-// }
-
-// function printName() {
-//     let nombre = askName();
-//     alert(`Saludos! ${nombre} un gusto tenerte a bordo!`)
-// }
-
-// printName();
-
 // =============================================================================
 // Variables globales
 // =============================================================================
@@ -36,6 +23,7 @@ function cargarEventListeners() {
   //saluda si pones nombre
   form.addEventListener("submit", addName);
 
+  //recupera datos del carrito 
   document.addEventListener("DOMContentLoaded", () => {
     articulosCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -57,13 +45,13 @@ $(".herotext").hide();
 consoleText(
   [
     "Welcome Aboard",
-    "Learn code with us",
+    "Learn code with us", //Texto del HeroText
     "Best courses online",
     "What do you waiting for?",
     "HTML CSS JavaScript And More...",
   ],
-  "text",
-  ["#ffc927"]
+  "text", // ID
+  ["#ffc927"] //color
 );
 
 function consoleText(words, id, colors) {
@@ -225,7 +213,7 @@ function limpiarHTML() {
   }
 }
 
-//Llamar a la APi
+//Llamar a la API
 
 $.get("https://jsonplaceholder.typicode.com/posts/1/comments", (datos) => {
   console.log(datos);
@@ -234,6 +222,7 @@ $.get("https://jsonplaceholder.typicode.com/posts/1/comments", (datos) => {
   }
 });
 
+//Boton mostrar/ocultar con Jquery
 $(document).ready(function () {
   $("#ocultarmails").click(function () {
     $("#comentarios").hide();
