@@ -272,6 +272,7 @@ form input[type="submit"]:hover {
   color: #ffc927;
   margin-bottom: 40px;
   font-size: 2.5rem;
+  text-shadow: 1px 1px 1px black;
 }
 #lista-cursos .row {
   margin-bottom: 20px;
