@@ -43,7 +43,7 @@ function cargarEventListeners() {
   });
 }
 
-jQuery(".herotext").hide();
+$(".herotext").hide();
 // jQuery(".herotext").hide(() => {
 //   jQuery(".herotext").fadeIn(8000, () => {
 //     jQuery(".herotext").fadeOut(10000);

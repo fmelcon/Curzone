@@ -411,6 +411,14 @@ footer {
   font-size: 2rem;
 }
 
+#ocultarmails {
+  padding: 1.2em 2.2em;
+}
+
+#vermails {
+  padding: 1.2em 2.2em;
+}
+
 .console-container {
   font-family: monospace;
   background-color: rgba(0, 0, 0, 0.603);
