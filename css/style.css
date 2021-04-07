@@ -210,7 +210,7 @@ form input[type="submit"]:hover {
   padding: 0;
   display: flex;
   width: 400%;
-  animation: cambio 40s ease-in  infinite ;
+  animation: cambio 40s ease-in infinite;
 }
 .slider li {
   width: 100%;
@@ -272,10 +272,10 @@ form input[type="submit"]:hover {
   padding: 2rem;
   text-align: center;
   font-weight: 500;
-  color: #ffc927;
+  color: black;
   margin-bottom: 40px;
   font-size: 2.5rem;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 3px 5px #ffc927;
 }
 #lista-cursos .row {
   margin-bottom: 20px;
@@ -418,15 +418,15 @@ footer {
 #ocultarmails {
   padding: 1.2em 2.2em;
   font-weight: 600;
-    box-shadow: 3px 3px 5px;
-    text-shadow: 1px 1px 1px black;
+  box-shadow: 3px 3px 5px;
+  text-shadow: 1px 1px 1px black;
 }
 
 #vermails {
   padding: 1.2em 2.2em;
   font-weight: 600;
-    box-shadow: 3px 3px 5px;
-    text-shadow: 1px 1px 1px black;
+  box-shadow: 3px 3px 5px;
+  text-shadow: 1px 1px 1px black;
 }
 
 .console-container {
