@@ -207,7 +207,7 @@ form input[type="submit"]:hover {
   padding: 0;
   display: flex;
   width: 400%;
-  animation: cambio 20s ease cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  animation: cambio 40s ease-in  infinite ;
 }
 .slider li {
   width: 100%;
@@ -414,10 +414,16 @@ footer {
 
 #ocultarmails {
   padding: 1.2em 2.2em;
+  font-weight: 600;
+    box-shadow: 3px 3px 5px;
+    text-shadow: 1px 1px 1px black;
 }
 
 #vermails {
   padding: 1.2em 2.2em;
+  font-weight: 600;
+    box-shadow: 3px 3px 5px;
+    text-shadow: 1px 1px 1px black;
 }
 
 .console-container {
