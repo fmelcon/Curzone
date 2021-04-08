@@ -39,7 +39,7 @@ consoleText(
     "Welcome Aboard",
     "Learn code with us", //Texto del HeroText
     "Best courses online",
-    "What do you waiting for?",
+    "What are you waiting for?",
     "HTML CSS JavaScript And More...",
   ],
   "text", // ID
